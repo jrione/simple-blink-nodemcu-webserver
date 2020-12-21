@@ -3,10 +3,10 @@
  
 ESP8266WebServer server(80);
  
-const char* ssid = "v"; // SSID Sesuaikan
-const char* password = "ppppp239"; // Password Sesuaikan
+const char* ssid = "namawifinya"; 
+const char* password = "passwordnya";
 String page = "";
-int LEDPin = 16; // Pin Sesuaikan
+int LEDPin = 16; // sama dengan pin D0 (Built-in LED)
 
 void setup() {
   pinMode(LEDPin, OUTPUT);
@@ -19,15 +19,14 @@ void setup() {
   WiFi.begin(ssid, password);
   
   while(WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print("Tidak Terhubung");
+    delay(700);
+    Serial.println("Tidak Terhubung");
   }
  
-  Serial.println("");
   Serial.println("WiFi terhubung ");
-  Serial.print("SSID: ");
+  Serial.println("SSID: ");
   Serial.println(WiFi.SSID());
-  Serial.print("IP Address: ");
+  Serial.println("IP Address: ");
   Serial.println(WiFi.localIP());
   Serial.println("Server berjalan...");
 
