@@ -6,4 +6,4 @@ Simple NodeMCU LED Toggle and controlled from Local Web Server (No Internet Requ
   <p> Sebelum menggunakan <i>sketch</i> ini, harus menginstall library esp8266 terlebih dahulu </p>
 </center>
 
-#selamat mencoba :3
+<!-- selamat mencoba :3 -->
