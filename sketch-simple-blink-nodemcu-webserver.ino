@@ -1,18 +1,17 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
-#include <ESP8266HTTPClient.h>
  
 ESP8266WebServer server(80);
  
-const char* ssid = "v";
-const char* password = "ppppp239";
+const char* ssid = "v"; // SSID Sesuaikan
+const char* password = "ppppp239"; // Password Sesuaikan
 String page = "";
-int LEDPin = 16;
+int LEDPin = 16; // Pin Sesuaikan
 
 void setup() {
-  // Setting Mode pin 
   pinMode(LEDPin, OUTPUT);
 
+  page += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">";
   page += "<style> body{ text-align:center;}  </style>";
   page += "<h1>Simple Blink NodeMCU Web Server</h1><p><button onclick=\"window.location.href=\'nyala\' \">Nyala</button> <button onclick=\"window.location.href=\'mati\' \">Mati</button></p>";
   
